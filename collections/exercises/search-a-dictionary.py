@@ -18,10 +18,23 @@ flavors = {
 ## If it isn’t, set cost to 0.
 
 ## Print the cost.
+choice = 'saffron'
+
+if choice in flavors:
+  cost = flavors[choice]
+else:
+  cost = 0
+print(cost)
+
+print('The cost of', choice, 'is', cost)
 
 ### Search a Dictionary Part 2:
 
 ## Initialize two variables: highest_cost to 0 and fanciest to an empty string.
+
+highest_cost = 0
+fanciest = ''
+
 
 ## Loop through the flavors dictionary using a for loop.
 
@@ -30,3 +43,10 @@ flavors = {
 ## If it is, update fanciest to this flavor and highest_cost to its price.
 
 ## After the loop, print the most expensive flavor.
+
+for (flavor, cost) in flavors.items():
+  if cost > highest_cost:
+    fanciest = (flavor)
+    highest_cost = (cost)
+print(fanciest, highest_cost)
+print('The fanciest flavor is', fanciest, 'and it costs', highest_cost)
